@@ -27,7 +27,11 @@ A flexible calendar class that can create and display a full calendar
 * .init()
 
 ## _dom
-For reliably and cleanly setting and getting of data-* attributes on an element. No camelCase to dash-case conversions necessary. No jQuery required.
+For reliably and cleanly setting and getting of data-* attributes on an element. No camelCase to dash-case conversions necessary. No jQuery required.  All methods are static.
+
+### Methods
+* .getData( elementId, attribute ) _// attribute without `data-`_
+* .setData( elementId, attribute, value ) _// attribute without `data-`_
 
 ## _file (incomplete)
 The start of a standard interface to managing files for upload
