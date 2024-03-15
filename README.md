@@ -2,7 +2,7 @@
 A small set of js htmx classes for common use cases. These came from a project that required maintaining existing functionality in a web app while adding new more performant enhancements/alternatives. There is a lot of console logging and probably even some references to missing libraries/modules. There are also some magic variables and configuration options.
 
 ## _api
-A standard interface for remote api calls (or really any remote call).
+A standard interface for remote api calls (or really any remote call). **Uses jQuery $.ajax() but will be converted to use native browser fetch api**
 
 ### Methods
 * .poll()
@@ -25,6 +25,9 @@ A flexible calendar class that can create and display a full calendar
 * .prevYear()
 * .nextYear()
 * .init()
+
+## _dom
+For reliably and cleanly setting and getting of data-* attributes on an element. No camelCase to dash-case conversions necessary. No jQuery required.
 
 ## _file (incomplete)
 The start of a standard interface to managing files for upload
