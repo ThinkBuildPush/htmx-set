@@ -52,14 +52,14 @@ new growl({ msg: 'string', type: 'string' }); // automatically sends this messag
 ```
 
 ### Methods
-* .growl() // Not completely implemented
+* .growl() _// Not completely implemented_
 
 ## _jig
 A template management class that allows for remote loading of tpl content, population of tpl content with array/object parameter with post population conformance
 
 ### Methods
 * .autotpl()
-* .fetchTpl() // uses _api
+* .fetchTpl() _// uses \_api_
 * .popTpl()
 * .postPop()
 
@@ -86,9 +86,9 @@ Allows sophisticated filtering, sorting and column display for any standard tabl
 * .autotable()
 * .initTable()
 * .render()
-* .openFilters() // For column value display to hide/show rows by value
+* .openFilters() _// For column value display to hide/show rows by value_
 * .filter()
-* .openPrefs() // For managing which columns to show/hide
+* .openPrefs() _// For managing which columns to show/hide_
 * .sortCol()
 * .toggleHiddenCol()
 * .updateHiddenColToggle()
@@ -97,9 +97,9 @@ Allows sophisticated filtering, sorting and column display for any standard tabl
 Simple toggle management using htmx attributes
 
 ### Methods
-* .autotoggle() // for setting corect toggle state on initial display from attribute
+* .autotoggle() _// for setting correct toggle state on initial display from attribute_
 * .setToggle()
-* .switch() .toggle() // synonyms
+* .switch() .toggle() _// synonyms_
 * .switchOff()
 * .switchOn()
 * .toggleAllOn()
