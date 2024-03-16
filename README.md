@@ -3,13 +3,13 @@ A small set of js htmx classes for common use cases. These came from a project t
 
 More complete documentation can be found [here](https://ThinkBuildPush.github.io/htmx-set)
 
-## [_api](api.md)
+## _api
 A standard interface for remote api calls (or really any remote call). **Uses jQuery $.ajax() but will be converted to use native browser fetch api**
 
 ### Methods
 * .poll()
 
-## [_auth](auth.md)
+## _auth
 A standard interface for use within a bearer token design pattern. The password auth endpoint is hard-coded and should be changed before using.
 
 ### Methods
@@ -17,7 +17,7 @@ A standard interface for use within a bearer token design pattern. The password 
 * .register()
 * .logout()
 
-## [_cal](cal.md)
+## _cal
 A flexible calendar class that can create and display a full calendar
 
 ### Methods
@@ -28,21 +28,21 @@ A flexible calendar class that can create and display a full calendar
 * .nextYear()
 * .init()
 
-## [_dom](dom.md)
+## _dom
 For reliably and cleanly setting and getting of data-* attributes on an element. No camelCase to dash-case conversions necessary. No jQuery required.  All methods are static.
 
 ### Methods
 * .getData( elementId, attribute ) _// attribute without `data-`_
 * .setData( elementId, attribute, value ) _// attribute without `data-`_
 
-## [_file](file.md) (incomplete)
+## _file (incomplete)
 The start of a standard interface to managing files for upload
 
 ### Methods
 * .read()
 * .formatBytes()
 
-## [_form](form.md)
+## _form
 A standard interface for creating fields for a form from a remote endpoint, populating a form from an object or array parameter and safely sending formData via async jQuery ajax (should probably use _api)
 
 ### Methods
