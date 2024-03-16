@@ -11,7 +11,13 @@ A standard interface for creating fields for a form from a remote endpoint, popu
 ```javascript
 // You do not need to call .setup() because it will be done as part of the instantiation.
 // Only '#formId' is strictly required
-new _form({ form_id: '#formId', method: 'HTTP_VERB', action: '/api/endpoint', data: new Array(), autoform: true|false });
+new _form({
+	form_id: '#formId',
+	method: 'HTTP_VERB',
+	action: '/api/endpoint',
+	data: new Array(),
+	autoform: true|false
+});
 ```
 
 ## Methods
@@ -26,7 +32,7 @@ Confirms `#formId` exists in DOM, that it has a method and an action if they are
 Not implemented
 
 ### .popForm()
-Hydrates form field values or selects dropdown item base don passed data array|object.
+Hydrates form field values or selects dropdown item based on passed data array|object.
 
 ### .validate()
 Currently only validates required fields and returns true or false depending on whether values are missing.  Should return a promise with field names that are missing values.
@@ -35,7 +41,7 @@ Currently only validates required fields and returns true or false depending on 
 Validates form, creates payload using .getFormData(), sets the appropriate headers and submits the form for backend processing. Returns appropriate promises for form submission based on http_status_code.
 
 ### .getFormData()
-Serializes the form into an array and then deconstructs teh serialization into standard array format.
+Serializes the form into an array and then deconstructs the serialization into standard array format.
 
 ### .resetForm()
 Resets form and deletes values in hidden inputs.
