@@ -1,5 +1,3 @@
-# _api
-
 A standard interface for remote api calls (or really any remote call). **Uses jQuery $.ajax() but will be converted to use native browser fetch api**
 
 ## Dependencies
@@ -9,55 +7,60 @@ A standard interface for remote api calls (or really any remote call). **Uses jQ
 ## Usage
 
 ```javascript
-new _api({ url: '/api/endpoint/or/url', method: 'POST|HTTP_VERB', data: new Array(), force_fetch: true|false })
-	.poll()
-	.then(
-		( return ) =>
-		{
-			workYourFu();
-		}
-	)
-	.catch(
-		( return ) =>
-		{
-			alertYourPeople();
-		}
-	);
+new _api({
+        url: '/api/endpoint/or/url',
+        method: 'POST|HTTP_VERB',
+        data: new Array(),
+        force_fetch: true|false
+    })
+    .poll()
+    .then(
+        ( return ) =>
+        {
+            workYourFu();
+        }
+    )
+    .catch(
+        ( return ) =>
+        {
+            alertYourPeople();
+        }
+    );
 
 // Pagination Example
 let data = [];
 let poller = new _api({ url: '/paginated/endpoint/next-page' })
-	.poll()
-	.then(
-		( returned_data )=>
-		{
-			data.push( returned_data );
-		}
-	)
-	.catch(
-		( _returned_data ) =>
-		{
-			// Do nothing or
-			return false;
-		}
-	);
+    .poll()
+    .then(
+        ( returned_data )=>
+        {
+            data.push( returned_data );
+        }
+    )
+    .catch(
+        ( _returned_data ) =>
+        {
+            // Do nothing or
+            return false;
+        }
+    );
 
 let get_data = 1;
 while( get_data )
 {
-	poller.poll()
-	.then(
-		( returned_data )=>
-		{
-			data.push( returned_data );
-		}
-	)
-	.catch(
-		( _returned_data ) =>
-		{
-			get_data = 0;
-		}
-	);
+    poller.poll()
+    .then(
+        ( returned_data )=>
+        {
+            data.push( returned_data );
+        }
+    )
+    .catch(
+        ( _returned_data ) =>
+        {
+            get_data = 0;
+        }
+    );
 }
 
 return data;
