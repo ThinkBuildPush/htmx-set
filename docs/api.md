@@ -1,3 +1,3 @@
 # htmx-set documentation
 
-* [_api](_api)
+## _api
