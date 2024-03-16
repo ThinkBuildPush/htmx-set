@@ -75,6 +75,6 @@ If !`auth_token`, the poll will still execute, just without an `auth_token` head
 
 If the poll is 200, it checks for a new auth_token (in case the action logs the user in) and uses [_store](store.md) to put auth_token in localStorage
 
-#### Returns
+## Returns
 * Resolved promise with complete returned data or complete xhr
 * Rejected promise with suitable message
