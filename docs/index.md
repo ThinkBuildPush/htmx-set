@@ -1,3 +1,4 @@
+# htmx-set
 A set of htmx classes to speed front end development without cumbersome frameworks
 
 * [_api](api.md)

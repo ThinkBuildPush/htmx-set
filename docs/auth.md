@@ -1,3 +1,4 @@
+# _auth
 A standard class that adds bearer token automatically for remote authentication. It can also gather form data automatically for direct passing to authentication endpoint.
 
 ## Dependencies

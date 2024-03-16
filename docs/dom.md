@@ -1,3 +1,4 @@
+# _dom
 For reliably and cleanly setting and getting of data-* attributes on an element. No camelCase to dash-case conversions necessary. All methods are static.
 
 ## Dependencies
