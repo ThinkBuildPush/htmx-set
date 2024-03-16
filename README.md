@@ -1,7 +1,9 @@
 # htmx-set
 A small set of js htmx classes for common use cases. These came from a project that required maintaining existing functionality in a web app while adding new more performant enhancements/alternatives. There is a lot of console logging and probably even some references to missing libraries/modules. There are also some magic variables and configuration options.
 
-## _api
+More complete documentation can be found [here](https://ThinkBuildPush.github.io/htmx-set)
+
+## [_api](api.md)
 A standard interface for remote api calls (or really any remote call). **Uses jQuery $.ajax() but will be converted to use native browser fetch api**
 
 ### Methods

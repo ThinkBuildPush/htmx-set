@@ -34,15 +34,8 @@ class _api
 					success: function( _ret )
 					{
 						console.log( $this.opts.url + ' success' );
+						return _resolve( _ret );
 
-						if( 1 == _ret.return )
-						{
-							return _resolve( _ret );
-						}
-						else
-						{
-							return _reject( _ret );
-						}
 					},
 					error: function( _ret )
 					{
@@ -79,8 +72,17 @@ class _api
 								console.log( 'Invalid path! ' + $this.opts.url );
 								return _reject( 'Invalid Path' );
 							case 401:
+								console.log( 'Unathed' );
+								return _reject( 'Not logged in' );
+							case 400:
+								console.log( 'Bad Request' );
+								return _reject( 'Invalid or missing information' );
+							case 403:
 								console.log( 'Path Unauthorized' );
 								return _reject( 'Not Authorized' );
+							case 404:
+								console.log( 'Path not found' );
+								return _reject( 'Path not found' );
 						}
 					}
 				);
