@@ -156,7 +156,7 @@ class _cal
 				let _startMonth = moment( _today.format( 'YYYY-MM-DD' ) );
 
 				let _iterate = 1;
-				while( 43 != _iterate )
+				while( 43 != _iterate ) // 43 is the maximum number of days in a month display including any spillover dates from previous or next months
 				{
 					$( '.cal-day-' + _iterate + '> .cal-date' ).html( _startMonth.format( 'DD' ) );
 
@@ -183,17 +183,14 @@ class _cal
 				then(
 					( _ret ) =>
 					{
-						if( 1 == _ret.return )
+						$( '.cal-event' ).remove();
+						if( 0 != _ret.count )
 						{
-							$( '.cal-event' ).remove();
-							if( 0 != _ret.count )
+							for( let _i in _ret.data )
 							{
-								for( let _i in _ret.data )
-								{
-									let _item = _ret.data[_i];
-									let _date = moment( _item.vol_shift_start );
-									$( '#cal-day-' + _date.format( 'YYYY-MM-DD' ) ).append( new _jig({ tpl: _tpl, data: _item, default: '' }).popTpl() )
-								}
+								let _item = _ret.data[_i];
+								let _date = moment( _item.event_start );
+								$( '#cal-day-' + _date.format( 'YYYY-MM-DD' ) ).append( new _jig({ tpl: _tpl, data: _item, default: '' }).popTpl() )
 							}
 						}
 					}

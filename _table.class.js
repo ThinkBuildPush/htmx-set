@@ -217,7 +217,7 @@ class _table
 
 		console.log( 'typeof window' );
 		console.log( typeof window.ux.tables );
-		tabconsole.log( window.ux.tables );
+		console.table( window.ux.tables );
 
 		if( 'undefined' == typeof window.ux.tables || !window.ux.tables[_table] )
 		{
@@ -286,7 +286,7 @@ class _table
 			}
 		);
 		console.log( 'filters' );
-		tabconsole.log( _filters );
+		console.table( _filters );
 
 		let _headerTpl = 'table_filter_col_section_nav_tpl';
 		for( let _i in _filters )

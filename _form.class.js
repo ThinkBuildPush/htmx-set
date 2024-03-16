@@ -6,7 +6,7 @@ class _form
 		console.log( '_form constructor' );
 		console.log( _opts );
 
-		let _defaults = { form_id: null, method: 'POST', autoform: false };
+		let _defaults = { form_id: null, method: 'POST', action: '/api/endpoint', autoform: false };
 		this.opts = { ..._defaults, ..._opts };
 
 		console.log( '_form constructor opts' );
@@ -159,7 +159,7 @@ class _form
 				let _formId = $this.opts.form_id;
 
 				console.log( '_form popForm data' );
-				tabconsole.log( $this.opts.data );
+				console.table( $this.opts.data );
 
 				for( let _i in $this.opts.data )
 				{
